@@ -1,0 +1,46 @@
+/* .nav{
+  background-color: tan;
+  width: 100%;
+}
+
+.lista{
+  text-decoration: none;
+  list-style: none;
+  display: inline-block;
+  font-size: larger;
+  padding: 0;
+  margin: 10px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.lista li{
+  display: inline-block;
+}
+
+.slika{
+  width: 40px;
+  margin: 5px 10px;
+  border-right: 1px solid black;
+  padding-right: 10px;
+  visibility: hidden;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+} */
+
+.absolute{
+  position: absolute;
+}
+
+.relative{
+  position: relative;
+}
+
+.fixed{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
