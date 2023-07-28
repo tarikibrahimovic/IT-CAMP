@@ -1,0 +1,77 @@
+.main {
+  width: 300px;
+  background-color: red;
+  height: 300px;
+  transition: 1s cubic-bezier(1, 0.04, 0.93, 0.37);
+  /* transition-timing-function: cubic-bezier(1,.04,.93,.37); */
+  transition-delay: 0.5s;
+}
+
+.main:hover {
+  background-color: blue;
+  width: 800px;
+  border-radius: 30px;
+  height: 500px;
+}
+
+.animation {
+  /* margin: auto; */
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation: mymove 8s infinite;
+  position: relative;
+}
+
+@keyframes mymove {
+  /* 0% {
+    transform: rotate(0deg);
+    left: 0px;
+  }
+  25% {
+    transform: rotate(20deg);
+    left: 0px;
+  }
+  50% {
+    transform: rotate(0deg);
+    left: 500px;
+  }
+
+  55% {
+    transform: rotate(0deg);
+    left: 500px;
+  }
+  70% {
+    transform: rotate(0deg);
+    left: 500px;
+  }
+  100% {
+    transform: rotate(-360deg);
+    left: 0px;
+  } */
+
+  0% {
+    transform: rotate(0deg);
+    left: 0px;
+  }
+  25% {
+    transform: rotate(20deg);
+    left: 0px;
+  }
+
+  50% {
+    transform: rotate(0deg);
+    left: 500px;
+  }
+
+  75% {
+    transform: rotate(0deg);
+    left: 500px;
+  }
+
+  100%{
+    transform: rotate(-360deg);
+    left: 0px;
+  }
+
+}
