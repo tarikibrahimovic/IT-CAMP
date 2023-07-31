@@ -1,9 +1,9 @@
-.main {
+/* .main {
   width: 300px;
   background-color: red;
   height: 300px;
   transition: 1s cubic-bezier(1, 0.04, 0.93, 0.37);
-  /* transition-timing-function: cubic-bezier(1,.04,.93,.37); */
+  transition-timing-function: cubic-bezier(1,.04,.93,.37);
   transition-delay: 0.5s;
 }
 
@@ -15,16 +15,35 @@
 }
 
 .animation {
-  /* margin: auto; */
+  margin: auto;
   width: 100px;
   height: 100px;
   background-color: red;
-  animation: mymove 8s infinite;
+  animation: mymove 5s;
+  animation-iteration-count: 2;
+  animation-timing-function: cubic-bezier(1, 0.04, 0.93, 0.37);
+  animation-direction: alternate;
   position: relative;
 }
 
+.animation2{
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: red;
+  animation: animation2 5s;
+}
+
+@keyframes animation2{
+  50%{
+    width: 500px;
+    background-color: blue;
+    margin-top: 200px;
+  }
+}
+
 @keyframes mymove {
-  /* 0% {
+  0% {
     transform: rotate(0deg);
     left: 0px;
   }
@@ -48,7 +67,7 @@
   100% {
     transform: rotate(-360deg);
     left: 0px;
-  } */
+  }
 
   0% {
     transform: rotate(0deg);
@@ -69,9 +88,32 @@
     left: 500px;
   }
 
-  100%{
+  100% {
     transform: rotate(-360deg);
     left: 0px;
   }
+} */
 
+body{
+  background-color: #4b4b4b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+button{
+  background-color: gold;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+}
+
+button:hover{
+  transition: 0.5s;
+  background-color: #ffcc00;
+  cursor: pointer;
+  transform: translate(0, -7px);
+  box-shadow: white 0px 3px 10px;
 }
