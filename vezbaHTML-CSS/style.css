@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.krug {
+  width: 1000px;
+  height: 1000px;
+  background: linear-gradient(
+    180deg,
+    rgba(209, 103, 68, 1) 0%,
+    rgba(255, 172, 176, 1) 100%,
+    rgba(37, 37, 39, 1) 100%
+  );
+  border-radius: 50%;
+  animation: rotacija 5s linear infinite;
+  position: absolute;
+}
+
+@keyframes rotacija {
+  50% {
+    width: 900px;
+    height: 900px;
+  }
+}
+
+.formContainer {
+  z-index: 10;
+  width: 500px;
+  height: 600px;
+  background-color: white;
+  display: flex;
+  padding: 20px;
+  justify-content: space-around;
+}
+
+img {
+  width: 200px;
+  height: 90%;
+  object-fit: cover;
+}
+
+.forma {
+  width: 45%;
+}
+
+#naslov {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+#submit{
+    margin: 20px 0;
+    width: 90%;
+    height: 50px;
+    background-color: #d16744;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input{
+    margin: 20px 0;
+    width: 90%;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
