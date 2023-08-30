@@ -128,21 +128,76 @@
 // let rezultat = mnogoSlozenaFunkcija(a, b);
 // console.log(rezultat);
 
-function logika(semafor1, semafor2, broj1, broj2) {
-  // if(semafor === 1){
-  //     if(semafor2 === 1){
-  //         console.log(broj1 + broj2);
-  //     }
-  // }
-  if (semafor1 === 1 || semafor2 >= 1) {
-    console.log(broj1 + broj2);
-  } else if (semafor1 === 2) {
-    console.log(broj1 * broj2);
-  } else if (semafor1 === 3) {
-    console.log(broj1 / broj2);
-  } else {
-    console.log(broj1 - broj2);
-  }
-}
+// function logika(semafor1, semafor2, broj1, broj2) {
+//   // if(semafor === 1){
+//   //     if(semafor2 === 1){
+//   //         console.log(broj1 + broj2);
+//   //     }
+//   // }
+//   if (semafor1 === 1 || semafor2 >= 1) {
+//     console.log(broj1 + broj2);
+//   } else if (semafor1 === 2) {
+//     console.log(broj1 * broj2);
+//   } else if (semafor1 === 3) {
+//     console.log(broj1 / broj2);
+//   } else {
+//     console.log(broj1 - broj2);
+//   }
+// }
 
-logika(15, 1, 5, 10);
+// logika(15, 1, 5, 10);
+
+// function oddOrEven(semafor, arg1, arg2){
+//   if(semafor % 2 === 0){
+//     console.log(arg1 + arg2);
+//   }
+//   else{
+//     console.log(arg1 - arg2);
+//   }
+// }
+
+// oddOrEven(502394802938403, 10, 5);
+
+// let a = 5.0000000000001
+// console.log(Math.round(a));
+// console.log(Math.floor(a));
+// console.log(Math.ceil(a));
+
+// function logika(semafor1,  broj1, broj2) {
+//   switch (semafor1) {
+//     case 1:
+//       console.log(broj1 + broj2);
+//       break;
+//     case 2:
+//       console.log(broj1 * broj2);
+//       break;
+//     case 3:
+//       console.log(broj1 / broj2);
+//       break;
+//     case 4:
+//       console.log(broj1 % broj2);
+//       break;
+//     default:
+//       console.log(broj1 - broj2);
+//       break;
+//   }
+// }
+
+// logika(4, 5, 10)
+
+// for(let i = 5; i < 10; i++){
+//   console.log("nesto");
+// }
+
+let rec = "tarik"
+let rec2 = "ibrahimovic"
+
+let rec3 = rec.slice(3);
+
+console.log(rec3);
+
+let cars = ["BMW", "Volvo", "Mini", "Mercedes", "Audi", "Fiat", "Porsche", "Volkswagen"];
+
+for(let i = 0; i < cars.length; i++){
+  console.log(cars[i]);
+}
