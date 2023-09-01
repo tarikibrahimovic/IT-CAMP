@@ -189,15 +189,54 @@
 //   console.log("nesto");
 // }
 
-let rec = "tarik"
-let rec2 = "ibrahimovic"
+let rec = "tarik";
+let rec2 = "ibrahimovic";
 
 let rec3 = rec.slice(3);
 
-console.log(rec3);
+// console.log(rec3);
 
-let cars = ["BMW", "Volvo", "Mini", "Mercedes", "Audi", "Fiat", "Porsche", "Volkswagen"];
+// let cars = ["BMW", "Volvo", "Mini", "Mercedes", "Audi", "Fiat", "Porsche", "Volkswagen"];
 
-for(let i = 0; i < cars.length; i++){
-  console.log(cars[i]);
-}
+// for(let i = 0; i < cars.length; i++){
+//   console.log(cars[i]);
+// }
+
+// for(let i = cars.length - 1; i >= 0; i--){
+//   console.log(cars[i]);
+// }
+
+// let i = 0;
+// let len = cars.length;
+// let text = "";
+// for (; i < len; ) {
+//   text += cars[i] + "<br>";
+//   i++;
+// }
+
+// function solution(start, finish) {
+//   //Mew
+//   let niz = [];
+//   for (let i = start; i <= finish; ) {
+//     if (i + 3 <= finish) {
+//       i += 3;
+//       niz.push(i);
+//       console.log(i, niz);
+//     } else if (i + 1 <= finish) {
+//       i += 1;
+//       niz.push(i);
+//       console.log(i, niz);
+//     }
+//     if (i === finish) {
+//       return niz.length;
+//     }
+//   }
+// }
+
+// solution(1, 10);
+
+let broj1 = parseFloat(prompt("Unesite broj 1")) 
+let broj2 = parseFloat(prompt("Unesite broj 2"))
+
+console.log(broj);
+
