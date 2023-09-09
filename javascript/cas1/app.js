@@ -189,10 +189,10 @@
 //   console.log("nesto");
 // }
 
-let rec = "tarik";
-let rec2 = "ibrahimovic";
+// let rec = "tarik";
+// let rec2 = "ibrahimovic";
 
-let rec3 = rec.slice(3);
+// let rec3 = rec.slice(3);
 
 // console.log(rec3);
 
@@ -235,8 +235,131 @@ let rec3 = rec.slice(3);
 
 // solution(1, 10);
 
-let broj1 = parseFloat(prompt("Unesite broj 1")) 
-let broj2 = parseFloat(prompt("Unesite broj 2"))
+// let broj1 = parseFloat(prompt("Unesite broj 1"))
+// let broj2 = parseFloat(prompt("Unesite broj 2"))
 
-console.log(broj);
+// console.log(broj);
+
+////////////////////////////////////////////////////////////////////
+
+// DOMACI 1
+
+// let broj1 = parseFloat(prompt("Unesite broj 1"));
+// let broj2 = parseFloat(prompt("Unesite broj 2"));
+// let broj3 = parseFloat(prompt("Unesite broj 3"));
+
+// let rezultat = broj1;
+
+// if(rezultat < broj2){
+//     rezultat = broj2
+// }
+
+// if(rezultat < broj3){
+//     rezultat = broj3
+// }
+
+// console.log(rezultat);
+
+// DOMACI 2
+
+// let x = parseFloat(prompt("Unesite broj 1"));
+// let y = parseFloat(prompt("Unesite broj 2"));
+// let z = parseFloat(prompt("Unesite broj 3"));
+// let p;
+
+// if (x > y) {
+//   //   p = x;
+//   //   x = y;
+//   //   y = p;
+
+//   [x, y] = [y, x];
+// }
+// if (x > z) {
+//   p = x;
+//   x = z;
+//   z = p;
+// }
+// if (y > z) {
+//   p = y;
+//   y = z;
+//   z = p;
+// }
+
+// console.log(`${x}, ${y}, ${z}`);
+
+////////////////////////////////////
+
+// let poeni = parseFloat(prompt("Unesite broj poena: "))
+
+// if(poeni <= 50){
+//     console.log("ocena 5");
+// }
+// else if(poeni <= 60){
+//     console.log("ocena 6");
+// }
+// else if(poeni <= 70){
+//     console.log("ocena 7");
+// }
+// else if(poeni <= 80){
+//     console.log("ocena 8");
+// }
+// else if(poeni <= 90){
+//     console.log("ocena 9");
+// }
+// else{
+//     console.log("ocena 10");
+// }
+
+/////////////////////////////////////////////
+
+// let broj1 = parseFloat(prompt("Unesite broj 1: "))
+// let broj2 = parseFloat(prompt("Unesite broj 2: "))
+
+// if(broj1 > broj2){
+//     console.log(`Razlika je: ${broj1 - broj2}` );
+//     // let razlika = broj1 - broj2
+// }
+// else{
+//     console.log(`Razlika je: ${broj2 - broj1}` );
+//     // let razlika = broj2 - broj1
+// }
+
+// // console.log(razlika);
+
+/////////////////////////////////////////////////
+
+// let a = parseFloat(prompt("Unesite stranicu a: "))
+// let b = parseFloat(prompt("Unesite stranicu b: "))
+// let c = parseFloat(prompt("Unesite stranicu c: "))
+
+// let s,p;
+
+// if (a+b>c && a+c>b && b+c>a){
+//     s = (a+b+c)/2;
+//     p = Math.sqrt(s*(s-a)*(s-b)*(s-c))
+//     console.log(`Povrsina je ${p}`);
+//     console.log(`kvadrat od s-a je: ${Math.pow(s-a, 2)}`);
+// }
+// else{
+//     console.log("Ne moze da se napravi trougao");
+// }
+
+/////////////////////////FOR PETLJE
+
+// for(let i = 0; i < 100; i++){
+//     console.log("Nest");
+// }
+
+///////////////////////////////
+
+// for (let i = 1; i <= 10; i++) {
+//   console.log(i);
+// }
+// for (let i = 1; i <= 10; i+=2) {
+//   console.log(i);
+// }
+
+for (let i = 10; i >= 1; i--){
+    console.log(i);
+}
 
