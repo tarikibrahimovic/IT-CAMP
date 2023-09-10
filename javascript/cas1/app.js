@@ -359,7 +359,81 @@
 //   console.log(i);
 // }
 
-for (let i = 10; i >= 1; i--){
-    console.log(i);
-}
+// for (let i = 10; i >= 1; i--){
+//     console.log(i);
+// }
 
+/////////////////////////////////
+
+// for (let i = 0; i < 10; ) {
+//   for (let j = 0; j < 10; ) {
+//     for (let z = 0; z < 10; ) {
+//       console.log(i, j, z);
+//       z++;
+//     }
+//     j++;
+//   }
+//   i++;
+// }
+
+//////////////////////////////////
+
+// let n = parseInt(prompt("Unesite n:"))
+
+// let zbir = 0;
+// let sredina = 0;
+
+// for(let i = 0; i <= n; i++){
+//     zbir += i;
+// }
+
+// sredina = zbir/n;
+
+// console.log(`Zbir je: ${zbir}, a aritmeticka sredina je: ${sredina}`);
+
+////////////////////////////////////////
+// Саставити програм којим се за унети природан број n израчунава суму: S n = + + + + 1! 2! 3! ... !.
+
+// let n = parseInt(prompt("Unesite n:"))
+
+// let faktorijel = 1;
+// let suma = 0;
+
+// for (let i = 1; i <= n; i++) {
+//     faktorijel *= i
+//     suma += faktorijel
+// }
+
+// console.log(`Faktorijel je: ${faktorijel}, suma je: ${suma}`);
+
+//////////////////////////////////////////////////////////
+//4.12
+
+// let n = parseInt(prompt("Unesite n:"))
+
+// let max = 0;
+
+// for(let i = 1; i <= n; i++){
+//     let broj = parseFloat(prompt(`Unesite broj ${i}:`))
+//     if(max < broj){
+//         max = broj
+//     }
+// }
+
+// console.log(max);
+
+///////////////////////////////////////////////
+// 4.13
+
+// let suma = 0;
+
+// for(let i = 0; i <= 100; i++){
+//     if(i % 6 === 0){
+//         console.log(i);
+//         suma+=i
+//     }
+// }
+
+// console.log(suma);
+
+////////////////////////////////////////////////
