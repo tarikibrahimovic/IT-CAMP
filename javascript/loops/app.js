@@ -344,14 +344,105 @@
 
 /////////primer razlozene for
 
-let i = 0;
+// let i = 0;
 
-for( ; i < 5; ){
-    i++;
+// for( ; i < 5; ){
+//     i++;
+// }
+
+// let j = 0;
+
+// while(j < 5){
+//     j++
+// }
+
+////////////////////5.7 a)
+
+// let fp = 1, fpp = 1;
+
+// let n = parseInt(prompt("Unesite broj elemenata:"))
+
+// let rowOutput = '1 1 ';
+
+// let i = 3, suma = 2;
+
+// while(i <= n){
+//     let pom = fp + fpp
+//     rowOutput += `${pom} `
+//     fp = fpp;
+//     fpp = pom;
+//     suma += pom
+//     i++
+// }
+// console.log(rowOutput, suma);
+
+//////////////////5.8
+
+// let n = parseInt(prompt("Unesite element:"))
+// let a = parseInt(prompt("Unesite stepen elemnta:"))
+
+// // console.log(Math.pow(n, a));
+// let i = 0, proizvod = 1;
+
+// while(i<a){
+//     proizvod *= n
+//     i++
+// }
+
+// console.log(proizvod);
+
+//////////////////5.9
+
+// let suma = 0, iterator = 0;
+
+// let stop = parseFloat(prompt("Unesite broj:"))
+
+// while(stop !== 0){
+//     suma+= stop
+//     stop = parseFloat(prompt("Unesite novi broj:"))
+//     iterator++
+// }
+
+// console.log(suma / iterator);
+
+////////////////5.10
+
+
+// let suma = 0, iterator = 0;
+
+// let stop = parseFloat(prompt("Unesite broj:"))
+
+// while(stop !== 0){
+//     if(stop >= 2 && stop <= 6){
+//         suma+= stop
+//         iterator++
+//     }
+
+//     stop = parseFloat(prompt("Unesite novi broj:"))
+// }
+
+// console.log(suma / iterator);
+
+
+///////////////5.12
+
+let n = parseInt(prompt("Unesite n:"))
+let m = parseInt(prompt("Unesite m:"))
+
+if(m > n){
+    [m, n] = [n, m]
+    // let pom = m;
+    // m = n;
+    // n = pom
 }
 
-let j = 0;
+let i = m, suma = 0;
 
-while(j < 5){
-    j++
+while(i <= n){
+    if(i % 2 === 1){
+        suma += Math.sqrt(i)
+    }
+    i++
 }
+
+console.log(suma);
