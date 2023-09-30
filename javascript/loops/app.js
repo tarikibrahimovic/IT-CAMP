@@ -426,23 +426,83 @@
 
 ///////////////5.12
 
-let n = parseInt(prompt("Unesite n:"))
-let m = parseInt(prompt("Unesite m:"))
+// let n = parseInt(prompt("Unesite n:"))
+// let m = parseInt(prompt("Unesite m:"))
 
-if(m > n){
-    [m, n] = [n, m]
-    // let pom = m;
-    // m = n;
-    // n = pom
-}
+// if(m > n){
+//     [m, n] = [n, m]
+//     // let pom = m;
+//     // m = n;
+//     // n = pom
+// }
 
-let i = m, suma = 0;
+// let i = m, suma = 0;
 
-while(i <= n){
-    if(i % 2 === 1){
-        suma += Math.sqrt(i)
+// while(i <= n){
+//     if(i % 2 === 1){
+//         suma += Math.sqrt(i)
+//     }
+//     i++
+// }
+
+// console.log(suma);
+
+
+///////////////5.18
+
+
+// let n = parseInt(prompt("Unesite broj:"))
+
+// let suma = 0;
+
+// let pom=n;
+
+// while(pom >= 1){
+//     suma += pom % 10//9
+//     pom = Math.floor(pom/10)
+// }
+
+// if(n % suma === 0){
+//     console.log("deljivo");
+// }
+// else{
+//     console.log("nedeljivo");
+// }
+
+/////////////////5.19
+
+// let n = parseInt(prompt("Unesite broj:"))
+// let obrnuto = 0;
+
+// while(n > 0){
+//     obrnuto = obrnuto*10 + n%10
+//     n = Math.floor(n/10)
+// }
+
+// console.log(obrnuto);
+
+/////////////////5.20
+
+// let n = parseInt(prompt("Unesite broj:"))
+
+// for(let k = 2; k <= n; k++){
+//     while(n % k === 0){
+//         n /= k;
+//         console.log(k);
+//     }
+// }
+
+////////////////////5.21
+
+for(let a = 1; a <=20; a++){
+    for(let b = 1; b <= 20; b++){
+        let zbir = a*a + b*b
+        let c=1;
+        while(c*c <= zbir){
+            if(c*c === zbir){
+                console.log(a, b, c);
+            }
+            c++
+        }
     }
-    i++
 }
-
-console.log(suma);
