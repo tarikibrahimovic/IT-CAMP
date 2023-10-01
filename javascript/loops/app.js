@@ -494,15 +494,73 @@
 
 ////////////////////5.21
 
-for(let a = 1; a <=20; a++){
-    for(let b = 1; b <= 20; b++){
-        let zbir = a*a + b*b
-        let c=1;
-        while(c*c <= zbir){
-            if(c*c === zbir){
-                console.log(a, b, c);
-            }
-            c++
-        }
-    }
-}
+// for(let a = 1; a <=20; a++){
+//     for(let b = 1; b <= 20; b++){
+//         let zbir = a*a + b*b
+//         let c=1;
+//         while(c*c <= zbir){
+//             if(c*c === zbir){
+//                 console.log(a, b, c);
+//             }
+//             c++
+//         }
+//     }
+// }
+
+///////////////
+
+// let x = 10;
+
+// console.log(Math.abs(-3));
+
+// let a = 3;
+// let b = 5;
+
+// [a, b] = [b, a]
+
+// let pom=a;
+
+// a=b;
+
+// b=pom
+
+// console.log();
+
+//////////////2.26
+
+// let xa = 1, ya = 1, xb = 4, yb = 1, xc = 2, yc = 5;
+
+// let a = Math.sqrt(Math.pow(xb - xc, 2) + Math.pow(yb - yc, 2), 2)
+// let b = Math.sqrt(Math.pow(xc - xa, 2) + Math.pow(yc - ya, 2), 2)
+// let c = Math.sqrt(Math.pow(xa - xb, 2) + Math.pow(ya - yb, 2), 2)
+
+
+// let s = (a + b + c) / 2
+
+// let p = Math.sqrt(s * (s - a) * (s - b) * (s - c))
+
+// console.log(p);
+
+////////////////////////2.27
+
+// let broj = parseInt(prompt("unesite trocifreni broj"))
+
+// let a = Math.floor(broj/100)
+// let b = Math.floor(broj/10)%10
+// let c = Math.floor(broj%10)
+
+// console.log(a);
+// console.log(b);
+// console.log(c);
+
+// console.log(a+b+c)
+
+////////////////////2.28
+
+let n = parseInt(prompt("Unesite broj:"))
+
+let n500 = Math.floor(n / 500)
+let n100 = Math.floor((n % 500) / 100)
+let n1 =  n % 100
+
+console.log(n500, n100, n1);
