@@ -607,12 +607,49 @@
 
 /////////////////////////////////////4.5
 
-let n = parseFloat(prompt("Unesite zeljeni broj elemenata:"))
-let suma = 0;
+// let n = parseFloat(prompt("Unesite zeljeni broj elemenata:"))
+// let suma = 0;
 
-for(let i=0; i<n;i++){
-    let broj = parseFloat(prompt(`Unesite ${i+1} element:`))
-    suma += broj
-}
+// for(let i=0; i<n;i++){
+//     let broj = parseFloat(prompt(`Unesite ${i+1} element:`))
+//     suma += broj
+// }
 
-console.log(`Suma je: ${suma} a srednja vrednost je: ${suma/n}`);
+// console.log(`Suma je: ${suma} a srednja vrednost je: ${suma/n}`);
+
+//////////////////////////////////////////4.12
+
+// let n = parseFloat(prompt("Unesite zeljeni broj elemenata:"))
+// let max = 0;
+
+// for(let i=0; i<n;i++){
+//     let broj = parseFloat(prompt(`Unesite ${i + 1} element:`))
+//     if(max < broj){
+//         max = broj;
+//     }
+// }
+
+// console.log(max);
+
+
+//////////////////////////////////////4.13
+
+// let suma = 0;
+
+// for(let i = 1; i <= 100; i++){
+//     if(i % 6 === 0){
+//         suma+=i
+//         console.log(i);
+//     }
+// }
+
+// console.log(suma);
+
+
+// let a = 2;
+
+// if(a === 2){
+//     var b = 3
+// }
+
+// console.log(b);
