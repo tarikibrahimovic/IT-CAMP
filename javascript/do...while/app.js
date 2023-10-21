@@ -72,14 +72,84 @@
 
 //////////////////////////////////////6.9
 
-let i = 100, suma = 0;
+// let i = 100, suma = 0;
 
-do{
-    if(i % 64 === 0){
-        suma += i
+// do{
+//     if(i % 64 === 0){
+//         suma += i
+//     }
+//     i++
+// }
+// while(i <=999)
+
+// console.log(suma);
+
+/////////////////////////////////////////////6.10
+
+// let n = parseInt(prompt("Unesite broj izmedju 0 i 10:"))
+// let broj;
+// let brojac = 0;
+
+// if(n <= 0 || n >10)
+// do{
+//     n = parseInt(prompt("Unesite broj izmedju 0 i 10:"))
+// }
+// while(n <= 0 || n >10)
+
+// do{
+//     broj = parseInt(prompt("Unesite broj:"))
+//     let pom = broj
+//     while(pom > 10){
+//         pom = Math.floor(pom/10)
+//     }
+//     if(pom === n)
+//         brojac++;
+// }
+// while(broj != 0)
+
+// console.log(brojac);
+
+///////////////////////////////////////////////////////7.2
+
+// let n;
+
+// do{
+//     n = parseFloat(prompt("Unesite broj:"))
+//     if(n < 0) break;
+//     console.log(n*n);
+// }
+// while(true)
+
+// let n = parseFloat(prompt("Unesite broj:"))
+
+// for(; true; ){
+//     if(n < 0) break;
+//     console.log(n*n);
+//     n = parseFloat(prompt("Unesite broj:"))
+// }
+
+////////////////////////////////////////////7.3, map, filter, split, slice, splice, concat, join,
+
+// let n;
+// let output = "";
+
+// for (let i = 0; i < 100; i++) {
+//   n = parseInt(prompt("Unesite broj"));
+//   if (n === 0)
+//     break;
+//   output += `${n}, `;
+// }
+
+// console.log(output);
+
+///////////////////////////////////////////7.7
+
+for(let i = 1; i <= 100; i++){
+    let j = 2
+    for(; j <= i; j++){
+        if(i % j === 0) break;
     }
-    i++
+    if(i === j){
+        console.log(i);
+    }
 }
-while(i <=999)
-
-console.log(suma);
