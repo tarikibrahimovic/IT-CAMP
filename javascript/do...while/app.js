@@ -144,12 +144,12 @@
 
 ///////////////////////////////////////////7.7
 
-for(let i = 1; i <= 100; i++){
-    let j = 2
-    for(; j <= i; j++){
-        if(i % j === 0) break;
-    }
-    if(i === j){
-        console.log(i);
-    }
-}
+// for(let i = 1; i <= 100; i++){
+//     let j = 2
+//     for(; j <= i; j++){
+//         if(i % j === 0) break;
+//     }
+//     if(i === j){
+//         console.log(i);
+//     }
+// }
