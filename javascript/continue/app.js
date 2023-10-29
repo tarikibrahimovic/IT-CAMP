@@ -222,57 +222,60 @@
 ///////////////////////////7.25
 
 
-let godina = parseInt(prompt("Unesite godinu:"))
-let mesec = parseInt(prompt("Unesite mesec:"))
-let dan = parseInt(prompt("Unesite dan:"))
+// let godina = parseInt(prompt("Unesite godinu:"))
+// let mesec = parseInt(prompt("Unesite mesec:"))
+// let dan = parseInt(prompt("Unesite dan:"))
 
-let d = 0;
+// let d = 0;
 
-switch (mesec){
-  case 1:
-  case 3:
-  case 5:
-  case 7:
-  case 8:
-  case 10:
-  case 12:
-    // console.log("31");
-    d = 31;
-    break;
-  case 4:
-  case 6:
-  case 9:
-  case 11:
-    // console.log("30");
-    d = 30;
-    break;
-  case 2:
-    if((godina % 4 === 0 && godina % 100 !== 0) || (godina % 400 === 0)){
-      // console.log("29");
-      d = 29
-    }
-    else {
-      // console.log("28");
-      d=28
-    }
-    break;
-  default:
-    console.log("mesec nije dobar");
-    break;
-}
+// switch (mesec){
+//   case 1:
+//   case 3:
+//   case 5:
+//   case 7:
+//   case 8:
+//   case 10:
+//   case 12:
+//     // console.log("31");
+//     d = 31;
+//     break;
+//   case 4:
+//   case 6:
+//   case 9:
+//   case 11:
+//     // console.log("30");
+//     d = 30;
+//     break;
+//   case 2:
+//     if((godina % 4 === 0 && godina % 100 !== 0) || (godina % 400 === 0)){
+//       // console.log("29");
+//       d = 29
+//     }
+//     else {
+//       // console.log("28");
+//       d=28
+//     }
+//     break;
+//   default:
+//     console.log("mesec nije dobar");
+//     break;
+// }
 
 
-if(dan === d){
-  dan = 1;
-  mesec++;
-}
-else{
-  dan++;
-}
-if(mesec > 12){
-  mesec = 1;
-  dan = 1;
-  godina ++;
-}
+// if(dan === d){
+//   dan = 1;
+//   mesec++;
+// }
+// else{
+//   dan++;
+// }
+// if(mesec > 12){
+//   mesec = 1;
+//   dan = 1;
+//   godina ++;
+// }
 
-console.log(dan, mesec, godina);
+// console.log(dan, mesec, godina);
+
+
+////////////////////////////////
