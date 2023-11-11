@@ -153,28 +153,46 @@ let recenica = "Ana Ana Ana Ana voli Milovana";
 // }
 
 // 8.8. Саставити програм за одређивање броја појављивања слова А у улазном тексту и изразити ту
-// вредност процентуално у односу на све унете знаке. Унос текста се завршава сигналом ЕОF. 
+// вредност процентуално у односу на све унете знаке. Унос текста се завршава сигналом ЕОF.
 
+// while(true){
+//     let rec = prompt("Unesite rec: ");
+//     let brojA = 0;
 
-while(true){
-    let rec = prompt("Unesite rec: ");
-    let brojA = 0;
+//     if(rec.includes("A")){
+//         for(let slovo of rec){
+//             console.log(slovo);
+//             if(slovo === "A")
+//             {
+//                 console.log("Proslo");
+//                     brojA++;
+//             }
+//         }
+//         // for(let i = 0; i < rec.length; i++){
+//         //     if(rec[i] === "A"){
+//         //         brojA++
+//         //     }
+//         // }
+//     }
 
-    if(rec.includes("A")){
-        // for(let slovo in rec){
-        //     console.log(slovo);
-        //     if(slovo === "A")
-        //     {
-        //         console.log("Proslo");
-        //             brojA++;
-        //     }
-        // }
-        for(let i = 0; i < rec.length; i++){
-            if(rec[i] === "A"){
-                brojA++
-            }
-        }
-    }
+//     console.log(`Procentalno slova A u reci ima ${brojA/rec.length * 100}%`);
+// }
 
-    console.log(`Procentalno slova A u reci ima ${brojA/rec.length * 100}%`);
+//8.12. Саставити програм који испитује да ли су у унетом тексту заграде“(“ и “ )“ добро упарене.
+// Унос текста се завршава сигналом ЕОF.
+
+let zagrade = prompt("Unesite recenicu:");
+
+let otvorene = 0,
+  zatvorene = 0;
+
+for (let karakter of zagrade) {
+  if (karakter === "(") {
+    otvorene++;
+  } else if (karakter === ")") {
+    zatvorene++;
+  }
 }
+
+if (zatvorene === otvorene) console.log("Dobro su poredjane");
+else console.log("Nisu dobro poredjane");
