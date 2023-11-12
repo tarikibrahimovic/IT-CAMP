@@ -178,21 +178,89 @@ let recenica = "Ana Ana Ana Ana voli Milovana";
 //     console.log(`Procentalno slova A u reci ima ${brojA/rec.length * 100}%`);
 // }
 
+
 //8.12. Саставити програм који испитује да ли су у унетом тексту заграде“(“ и “ )“ добро упарене.
 // Унос текста се завршава сигналом ЕОF.
 
-let zagrade = prompt("Unesite recenicu:");
+// let zagrade = prompt("Unesite recenicu:");
 
-let otvorene = 0,
-  zatvorene = 0;
+// let otvorene = 0,
+//   zatvorene = 0;
 
-for (let karakter of zagrade) {
-  if (karakter === "(") {
-    otvorene++;
-  } else if (karakter === ")") {
-    zatvorene++;
-  }
-}
+// for (let karakter of zagrade) {
+//   if (karakter === "(") {
+//     otvorene++;
+//   } else if (karakter === ")") {
+//     zatvorene++;
+//   }
+// }
 
-if (zatvorene === otvorene) console.log("Dobro su poredjane");
-else console.log("Nisu dobro poredjane");
+// if (zatvorene === otvorene) console.log("Dobro su poredjane");
+// else console.log("Nisu dobro poredjane");
+
+// 8.13. Саставити програм који врши конверзију унетих великих слова у мала. Унос текста се
+// завршава сигналом ЕОF. 
+
+// let input = prompt("Unesite recenicu:")
+
+// console.log(input.toLowerCase());
+
+// console.log(prompt("Unesite recenicu").toLowerCase());
+
+
+// 8.15. Саставити програм који врши конверзију првог слова у велико,
+//  а сва остала у мала унете реченице. Унос текста се завршава сигналом ЕОF. 
+
+// let input = prompt("Unesite recenicu:")
+// let output = ""
+
+// for(let i = 0; i < input.length; i++){
+//   if(i === 0){
+//     output += input[i].toUpperCase()
+//   }
+//   else{
+//     output += input[i].toLowerCase()
+//   }
+// }
+
+// console.log(output);
+
+
+// console.log(input[0].toUpperCase() + input.slice(1).toLowerCase());
+
+
+// 8.16. Саставити програм којим се копира улазни текст на екран уз
+//  раздвајање речи по једним
+// знаком размака. Речи су на улазу раздвојене произвољним бројем знакова
+//  размака и/или табулације.
+// Текст се завршава сигналом ЕОF. 
+
+// let input = prompt("Unesite tekst: "), output = " ";
+
+// for(let i = 0; i < input.length; i++){
+//   if(input[i] === " "){
+//     if(output[output.length-1] !== " ")
+//       output += input[i]
+//   }
+//   else {
+//     output += input[i]
+//   }
+// }
+
+// console.log(output);
+ 
+
+// 8.17. Саставити програм који копира улазни текст на екран, где сваку реч приказује у једној
+// линији. Унос текста се завршава сигналом ЕОF. 
+
+// let input = prompt("Unesite recenicu:")
+
+// for(let word of input.split(" ")){
+//   console.log(word);
+// }
+
+// \n, 
+
+console.log("nesto \n jos nesto \n jos nesto \n");
+console.log("nesto \t jos nesto\t jos nesto");
+
