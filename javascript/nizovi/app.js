@@ -291,16 +291,192 @@
 // 10.7. Саставити програм за израчунавање и исписивање аритметичке средине задатог низа (дужине
 //     n) целих бројева
 
-let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
-let niz = []
+// let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let niz = []
 
-for(let i = 0; i < brojClanova; i++){
-    let broj = parseFloat(prompt("Unesite broj:"))
-    niz.push(broj)
+// for(let i = 0; i < brojClanova; i++){
+//     let broj = parseFloat(prompt("Unesite broj:"))
+//     niz.push(broj)
+// }
+
+// let suma = niz.reduce((a, b) => {
+//     return a + b
+// })
+
+// console.log(`Aritmeticka sredina je: ${suma/brojClanova}`);
+
+// 10.8. Саставити програм који за унети низ (дужине n) целих бројева израчунава и исписуеј
+// аритметичку средину оних елемената низа који су дељиви са 3.
+
+// let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let niz = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   niz.push(broj);
+// }
+
+// niz = niz.filter(clan => clan % 3 === 0)
+
+// let res = niz.reduce((a, b) => {
+//     return a + b
+// })
+
+// console.log(`Aritmeticka sredina je: ${res/niz.length}`);
+
+// let res = 0;
+// let t = 0;
+
+// niz.forEach((clan) => {
+//   if (clan % 3 === 0) {
+//     t++;
+//     res += clan;
+//   }
+// });
+
+// console.log(`Aritmeticka sredina je: ${res / t}`);
+
+
+// 10.9. Саставити програм који ће за унети низ (дужине n) целих бројева одредити и исписати:
+// а) суму парних и суму непарних бројева;
+// б) суму елемената са парним индексима и суму елемената са непарним индексима. 
+ 
+// let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let niz = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   niz.push(broj);
+// }
+
+// let resParnih = 0;
+// let resNeparnih = 0;
+
+// niz.forEach((clan, i) => {
+//     // clan % 2 === 0 ? resParnih += clan : resNeparnih += clan
+//     //ovo je za po a)
+//     // if(clan%2 === 0){
+//     //     resParnih += clan
+//     // }
+//     // else{
+//     //     resNeparnih += clan
+//     // }
+
+//     //ovo je za pod b)
+//     if(i%2 === 0){
+//         resParnih += clan
+//     }
+//     else{
+//         resNeparnih += clan
+//     }
+// })
+
+// console.log(`Zbir parnih je: ${resParnih}, a neparnih je: ${resNeparnih}`);
+
+
+// 10.11. Саставити програм који учита елементе низа A A A A = ( 1 2 , ,..., n ) дужине n и низа
+// B B B B = ( 1 2 , ,..., m ) дужине m и спаја у један низ C A A A B B B = ( 1 2 1 2 , ,..., , , ,..., n m ) дужине n+m.
+// Исписати новокреирани низ. 
+
+
+// let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let niz = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   niz.push(broj);
+// }
+
+// let brojClanova2 = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let niz2 = [];
+
+// for (let i = 0; i < brojClanova2; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   niz2.push(broj);
+// }
+
+// console.log(niz.concat(niz2));
+
+// 10.12. Саставити програм који учита елементе два низа низа дужине n A A A A = ( 1 2 , ,..., n ) и
+// B B B B = ( 1 2 , ,..., n ) и формира и исписује нови низ чији су елементи
+// C A B A B A B = + + + ( 1 1 2 2 , ,..., n n ). 
+
+// let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let niz = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   niz.push(broj);
+// }
+
+// let niz2 = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   niz2.push(broj);
+// }
+
+// let niz3 = niz.map((el, i) => {
+//     return el + niz2[i]
+// })
+
+// // let niz3 = []
+// // niz.forEach((el, i) => {
+// //     niz3.push(el + niz2[i])
+// // })
+
+// console.log(niz3);
+
+// 10.14. Саставити програм за формирање низа С од два задата низа целих бројева А и В (сваки
+//     дужине 5) на следећи начин: А[0]+B[4],…,A[4]+B[0]. Исписати низ С.
+
+// let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let niz = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   niz.push(broj);
+// }
+
+// let niz2 = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   niz2.push(broj);
+// }
+
+// // niz2.reverse()
+// let niz3 = []
+// niz.forEach((el, i) => {
+//     niz3.push(el + niz2[niz2.length - i - 1])
+// })
+
+// console.log(niz3);
+
+// 10.15. Саставити програм који учита елементе низа A A A A = ( 1 2 , ,..., n ) дужине n и низа
+// B B B B = ( 1 2 , ,..., m ) дужине m, а затим формира и исписује низ С који се састоји од парних елемената
+// низа А и низа В. 
+
+let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+let niz = [];
+
+for (let i = 0; i < brojClanova; i++) {
+  let broj = parseFloat(prompt("Unesite broj:"));
+  niz.push(broj);
 }
 
-let suma = niz.reduce((a, b) => {
-    return a + b
+let niz2 = [];
+brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+
+for (let i = 0; i < brojClanova; i++) {
+  let broj = parseFloat(prompt("Unesite broj:"));
+  niz2.push(broj);
+}
+
+let niz3 = niz.concat(niz2).filter((clan) => {
+    if(clan % 2 === 0){
+        return clan
+    }
 })
 
-console.log(`Aritmeticka sredina je: ${suma/brojClanova}`);
+console.log(niz3);
