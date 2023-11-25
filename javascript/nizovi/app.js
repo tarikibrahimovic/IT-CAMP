@@ -457,6 +457,137 @@
 // B B B B = ( 1 2 , ,..., m ) дужине m, а затим формира и исписује низ С који се састоји од парних елемената
 // низа А и низа В. 
 
+// let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let niz = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   niz.push(broj);
+// }
+
+// let niz2 = [];
+// brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   niz2.push(broj);
+// }
+
+// let niz3 = niz.concat(niz2).filter((clan) => {
+//     if(clan % 2 === 0){
+//         return clan
+//     }
+// })
+
+// console.log(niz3);
+
+
+// 10.16. Саставити програм који ће учитати два низа целих бројева А и В једнаких дужина n и на
+// основу њих формирати низ С тако да i-ти елемент низа С буде једнак мањем од i-тих елемената низа
+// А и В. Ако су i-ти елементи низа А и В једнаки онда i-ти елемент низа С треба да добије вредност
+// нула. Исписати низ С. 
+
+// let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let niz = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   niz.push(broj);
+// }
+
+// let niz2 = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   niz2.push(broj);
+// }
+
+// let niz3 = niz2.map((el, i) => {
+//   if(el > niz[i]){
+//     return niz[i]
+//   }
+//   else if(el === niz[i]){
+//     return 0
+//   }
+//   else{
+//     return el
+//   }
+// })
+
+// console.log(niz3);
+// 10.17. Саставити програм који за учитани низ целих бројева А дужине n формира и исписује два
+// низа: низ В који садржи негативне елементе низа А и низ С који садржи позитивне елементе и нуле
+// низа А. 
+
+// let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let niz = [];
+// let niz2 = [], niz3 = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   niz.push(broj);
+// }
+
+// for(let clan of niz){
+//   clan >= 0 ? niz2.push(clan) : niz3.push(clan)
+// }
+
+// console.log(`Niz za pozitivne: ${niz2} i niz za negativne je: ${niz3}`);
+
+
+// 10.18. Саставити програм који за унети низ реланих бројева А дужине n формира и исписује нови
+// низ В кога чине елементи низа А који су већи од аритемтичке средине свих елемената низа А. 
+
+// let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let niz = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   niz.push(broj);
+// }
+
+// let suma = niz.reduce((a, b) => {
+//   return a + b
+// })
+
+// let artSredina = suma / niz.length
+
+// let niz2 = niz.filter((clan) => {
+//   if(clan > artSredina){
+//     return clan
+//   }
+// })
+
+
+// console.log(niz2);
+
+// 10.19. Саставити програм који за унети низ целих бројева А, дужине n, формира и исписује нови
+// низ В чији се елементи формирају по следећем принципу: В0=А0, В1=А0+А1, В2=А0+А1+А2, ...,
+// Bi=A0+A1+A2+...+Ai.
+
+// let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let niz = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   niz.push(broj);
+// }
+
+// let pom = 0
+
+// let niz2 = niz.map((clan) => {
+//   pom += clan
+//   return pom
+// })
+
+// console.log(niz2);
+
+
+// 10.22. Саставити функцију којом се одређује број различитих елемената у задатом целобројном
+// низу. Затим саставити програм који чита низ целих бројева, и одређује број различитих елемената
+// користећи претходну функцију и исписује резултат. 
+
+
 let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
 let niz = [];
 
@@ -465,18 +596,81 @@ for (let i = 0; i < brojClanova; i++) {
   niz.push(broj);
 }
 
-let niz2 = [];
-brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+function numberOfUnique(niz){
+  let set = new Set(niz)
+  console.log(set);
 
-for (let i = 0; i < brojClanova; i++) {
-  let broj = parseFloat(prompt("Unesite broj:"));
-  niz2.push(broj);
+  return set.size
 }
 
-let niz3 = niz.concat(niz2).filter((clan) => {
-    if(clan % 2 === 0){
-        return clan
-    }
-})
+let pom = niz.filter((value, index, self) => {
+  return self.indexOf(value) === index
+});
 
-console.log(niz3);
+console.log(pom);
+
+// console.log(numberOfUnique(niz));
+
+
+// 10.23. Саставити програм за израчунавање статистике полагања испита која обухвата следеће
+// функције: израчунавање укупне просечне оцене (сви који су полгали испит), израчунавање просечне
+// оцене оних који су положили (оцена већа од 5), 
+// израчунавање броја који су положили испит,
+// израчунавање броја који нису положили испит и израчунавање броја који имају оцену већу од
+// просечне. У главном програму се уноси број студената и оцене студената у облику низа. Исписати
+// добијене резултате
+
+
+// let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let main = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   main.push(broj);
+// }
+
+
+// function avgGrade(niz){
+//   let suma = niz.reduce((a,b) => {
+//     return a+b
+//   })
+
+//   return suma / niz.length
+// }
+
+// function avgGradeSuccess(niz){
+//   return avgGrade(niz.filter(clan => {
+//     if(clan > 5)
+//     return clan
+//   }))
+// }
+
+// function numOfSuccess(niz){
+//   return niz.filter(clan => {
+//     if(clan > 5)
+//     return clan
+//   }).length
+// }
+
+
+// function numOfFail(niz){
+//   return niz.filter(clan => {
+//     if(clan === 5)
+//     return clan
+//   }).length
+// }
+
+// function numOfAvgSuccess(niz){
+//   let avg = avgGrade(niz)
+//   return niz.filter((clan) => {
+//     if(clan > avg){
+//       return clan
+//     }
+//   }).length
+// }
+
+// console.log(avgGrade(main));
+// console.log(avgGradeSuccess(main));
+// console.log(numOfSuccess(main));
+// console.log(numOfFail(main));
+// console.log(numOfAvgSuccess(main));
