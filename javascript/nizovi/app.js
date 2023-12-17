@@ -730,7 +730,6 @@
 // let max = Math.max(...main);
 // let min = Math.min(...main);
 
-
 // let nizOnajKojiTreba= main.filter((clan) => {
 //   if(clan < max/2 && clan > min*2){
 //     return clan
@@ -738,7 +737,6 @@
 // })
 // console.log(main);
 // console.log(nizOnajKojiTreba);
-
 
 // 10.29. Саставити програм који за унети низ целих бројева, дужине n, исписује елемент најмање
 // вредности међу парним бројевима.
@@ -779,25 +777,23 @@
 
 // console.log(Math.max(...main.filter((clan, i) => i % 2 === 0)));
 
-
 // 10.31. Саставити програм који исписује обавештење да ли учитани низ бројева одговара
 // Фибоначијевом низу. Низ бројева који се уноси мора имати најмање три елемента.
 // Фибоначијев низ: f1=1, f2=1, fi=fi-1+fi-2, i=3, 4, 5, ...
 
+// let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let main = [];
 
-let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
-let main = [];
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   main.push(broj);
+// }
 
-for (let i = 0; i < brojClanova; i++) {
-  let broj = parseFloat(prompt("Unesite broj:"));
-  main.push(broj);
-}
+// let fibonacijevNiz = [1, 1];
 
-let fibonacijevNiz = [1, 1];
-
-for (let i = 2; i < brojClanova; i++) {
-  fibonacijevNiz.push(fibonacijevNiz[i - 1] + fibonacijevNiz[i - 2]);
-}
+// for (let i = 2; i < brojClanova; i++) {
+//   fibonacijevNiz.push(fibonacijevNiz[i - 1] + fibonacijevNiz[i - 2]);
+// }
 // prvo resenje:
 // let semafor = true
 
@@ -811,9 +807,243 @@ for (let i = 2; i < brojClanova; i++) {
 
 //drugo resenje:
 
-if(fibonacijevNiz.join(',') === main.join(',')){
-  console.log("ovo jeste fibonacijev niz")
+// if(fibonacijevNiz.join(',') === main.join(',')){
+//   console.log("ovo jeste fibonacijev niz")
+// }
+// else{
+//   console.log("ovo nije fibonacijev niz");
+// }
+
+// 10.32. Саставити програм који за унети низ целих бројева, дужине n, проналази позицију траженог
+// елемента или исписује обавештење да тражени елемент не постоји у низу. Користити методу
+// Линеарног претраживања:
+// а) без употреба функција;
+// б) коршћењем функције која линеарно претражује низ.
+
+// let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let main = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   main.push(broj);
+// }
+
+// let broj = parseFloat(prompt("Unesite broj koji trazite:"));
+
+// // let trazieniBroj = main.find((clan) => clan === broj)
+// // // let trazieniBroj = main.indexOf(broj)
+
+// // if(trazieniBroj || trazieniBroj !== -1){
+// //   console.log(trazieniBroj);
+// // }
+// // else{
+// //   console.log("Ne postoji");
+// // }
+
+// //b)
+
+// let trazieniBroj = 0;
+// for(let clan of main){
+//   if(clan === broj){
+//     trazieniBroj = clan
+//     break;
+//   }
+// }
+
+// console.log(trazieniBroj);
+
+// 10.34. Саставити програм који од унетог низа А целих бројева дужине n формира и исписује низ В
+// са обрнутим распоредом елемената.
+
+// let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let main = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   main.push(broj);
+// }
+
+// let niz2 = [...main].reverse()
+// main.push(10)
+// console.log(niz2);
+// console.log(main);
+
+// 10.35. Саставити програм за циклично премештање елемената задатог низа целих бројева дужине n
+// за једно место у лево и исписивање новодобијеног низа.
+
+// let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let main = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   main.push(broj);
+// }
+
+// let pom = main.shift()
+// main.push(pom)
+// console.log(main);
+
+// 10.36. Саставити програм који за унети низ целих бројева дужине n врши ротирање чланова низа за
+// x места у лево и исписује новодбијени низ.
+
+// let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let main = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   main.push(broj);
+// }
+
+// let x = parseInt(prompt("Unesite broj mesta za rotaciju: "));
+
+// for (let i = 0; i < x; i++) {
+//   let pom = main.shift();
+//   main.push(pom);
+// }
+// console.log(main);
+
+// 10.37. Саставити програм који за унети низ целих бројева дужине n врши замену суседних елемената низа на парним и непарним
+//  позицијама и исписује новодобијени низ
+
+// let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let main = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   main.push(broj);
+// }
+
+// for (let i = 0; i < main.length-1; i += 2) {
+//   let pom = main[i];
+//   main[i] = main[i + 1];
+//   main[i + 1] = pom;
+// }
+
+// console.log(main);
+
+// 10.38. Саставити програм који за унети низ целих бројева дужине n формира и приказује нови низ
+// који је састављен од елемената без понављања унетог низа.
+
+// let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let main = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   main.push(broj);
+// }
+
+// let niz2 = [...new Set(main)]
+
+// let niz = main.filter((clan, index, self) => {
+//   return self.indexOf(clan) === index
+// })
+
+// let niz2 = [];
+
+// for(let clan of main){
+//   if(!niz2.includes(clan)){
+//     niz2.push(clan)
+//   }
+// }
+
+// 10.42. Саставити програм којим се у уређени низ бројева умеће нови број тако да низ и даље буде
+// уређен. Исписати новодобијени низ.
+
+// let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let main = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   main.push(broj);
+// }
+
+// let broj = parseFloat(prompt("Unesite broj koji zelite da ubacite:"));
+
+// if (broj > main[main.length - 1]) {
+//   main.push(broj);
+// } else {
+//   for (let i = 0; i < main.length; i++) {
+//     if (main[i] > broj) {
+//       main.splice(i, 0, broj);
+//       break;
+//     }
+//   }
+// }
+
+// console.log(main);
+
+// 10.43. Саставити програм који учитава два низа целих бројева који су уређени по неопадајућем
+// редоследу (различитих дужина) и исписује њихову фузију која је такође неопадајућа.
+
+// let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let main = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   main.push(broj);
+// }
+
+// brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let main2 = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   main2.push(broj);
+// }
+
+// let niz3 = main.concat(main2).sort((a, b) => a - b)
+// console.log(niz3);
+
+// 10.44. Саставити програм који исписује број који се највећи број пута појављује у низу целих
+// бројева, као и број појављивања. Прво сортирати низ у растућем поретку, а затим пронаћи најдужу
+// секвенцу једнаких елемената. Низ се уноси са тастатуре.
+
+let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+let main = [];
+
+for (let i = 0; i < brojClanova; i++) {
+  let broj = parseFloat(prompt("Unesite broj:"));
+  main.push(broj);
 }
-else{
-  console.log("ovo nije fibonacijev niz");
+
+main.sort((a, b) => a - b);
+
+let maxIteration = 0;
+let maxNumber = 0;
+
+for (let i = 0; i < main.length; i++) {
+  let brojac = 0;
+  for (let j = i; j < main.length; j++) {
+    if (main[i] === main[j]) {
+      brojac++;
+    }
+  }
+  if (brojac > maxIteration) {
+    maxIteration = brojac;
+    maxNumber = main[i];
+  }
 }
+
+console.log(maxIteration, maxNumber);
+
+
+let maxLength = 0;
+let maxNiz = []
+
+for (let i = 0; i < main.length; i++) {
+  let pomNiz = [];
+  for(let j = i; j < main.length; j++){
+    if(main[j] === main[i]){
+      pomNiz.push(main[j])
+    }
+    else{
+      break;
+    }
+  }
+  if(pomNiz.length > maxLength){
+    maxLength = pomNiz.length
+    maxNiz = pomNiz
+  }
+}
+
+console.log(maxLength, maxNiz);
