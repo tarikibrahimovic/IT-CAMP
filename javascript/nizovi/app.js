@@ -998,6 +998,71 @@
 // бројева, као и број појављивања. Прво сортирати низ у растућем поретку, а затим пронаћи најдужу
 // секвенцу једнаких елемената. Низ се уноси са тастатуре.
 
+// let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
+// let main = [];
+
+// for (let i = 0; i < brojClanova; i++) {
+//   let broj = parseFloat(prompt("Unesite broj:"));
+//   main.push(broj);
+// }
+
+// main.sort((a, b) => a - b);
+
+// let maxIteration = 0;
+// let maxNumber = 0;
+
+// for (let i = 0; i < main.length; i++) {
+//   let brojac = 0;
+//   for (let j = i; j < main.length; j++) {
+//     if (main[i] === main[j]) {
+//       brojac++;
+//     }
+//   }
+//   if (brojac > maxIteration) {
+//     maxIteration = brojac;
+//     maxNumber = main[i];
+//   }
+// }
+
+// console.log(maxIteration, maxNumber);
+
+
+// let maxLength = 0;
+// let maxNiz = []
+
+// for (let i = 0; i < main.length; i++) {
+//   let pomNiz = [];
+//   for(let j = i; j < main.length; j++){
+//     if(main[j] === main[i]){
+//       pomNiz.push(main[j])
+//     }
+//     else{
+//       break;
+//     }
+//   }
+//   if(pomNiz.length > maxLength){
+//     maxLength = pomNiz.length
+//     maxNiz = pomNiz
+//   }
+// }
+
+// console.log(maxLength, maxNiz);
+
+// 10.45. Саставити програм који испистује да ли у унетом низу целих бројева постоје два елемента
+// чији је збир једнак датом броју. Користити бинарну претрагу за проналажење допуне до датог броја.
+// Елементи низа се уносе са тастатуре. 
+
+let findElement = (niz, broj) => {
+  for(let i = 0; i < niz.length; i++){
+    for(let j = i + 1; j < niz.length; j++){
+      if(niz[i] + niz[j] === broj){
+        return true
+      }
+    }
+  }
+  return false
+}
+
 let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
 let main = [];
 
@@ -1006,44 +1071,11 @@ for (let i = 0; i < brojClanova; i++) {
   main.push(broj);
 }
 
-main.sort((a, b) => a - b);
+let trazeniBroj = parseInt(prompt("Unesite broj koji trazite:"));
 
-let maxIteration = 0;
-let maxNumber = 0;
-
-for (let i = 0; i < main.length; i++) {
-  let brojac = 0;
-  for (let j = i; j < main.length; j++) {
-    if (main[i] === main[j]) {
-      brojac++;
-    }
-  }
-  if (brojac > maxIteration) {
-    maxIteration = brojac;
-    maxNumber = main[i];
-  }
+if(findElement(main, trazeniBroj)){
+  console.log("Postoji");
 }
-
-console.log(maxIteration, maxNumber);
-
-
-let maxLength = 0;
-let maxNiz = []
-
-for (let i = 0; i < main.length; i++) {
-  let pomNiz = [];
-  for(let j = i; j < main.length; j++){
-    if(main[j] === main[i]){
-      pomNiz.push(main[j])
-    }
-    else{
-      break;
-    }
-  }
-  if(pomNiz.length > maxLength){
-    maxLength = pomNiz.length
-    maxNiz = pomNiz
-  }
+else{
+  console.log("Ne postoji");
 }
-
-console.log(maxLength, maxNiz);
