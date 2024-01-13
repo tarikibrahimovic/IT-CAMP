@@ -55,6 +55,16 @@ class Radnik {
 }
 
 let polazik1 = new Polazik("Pera", "Peric", 25);
-let radnik = new Radnik(1);
 
-polazik1.ispis();
+polazik1.godine = 30;
+
+// let radnik = new Radnik(1);
+// let covek1 = new Covek("Tarik", "Ibrahimovic");
+
+// covek1.ime = "Dado";
+
+// covek1.ispis();
+
+// polazik1.ispis();
+
+// console.log(polazik1);

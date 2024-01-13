@@ -155,3 +155,43 @@
 // });
 
 ////////////////////////////////
+// OBNOVA
+
+// let h1 = document.querySelector("h1");
+
+// h1.addEventListener("click", function () {
+//   let h3 = document.createElement("h3");
+//   h3.innerText = "Hello World";
+//   document.body.appendChild(h3);
+// });
+
+// let button = document.createElement("button");
+
+// button.innerText = "Click me";
+
+// document.body.appendChild(button);
+
+// button.addEventListener("click", function () {
+//   let h3 = document.createElement("h3");
+//   h3.innerText = "Hello World";
+//   document.body.appendChild(h3);
+// });
+
+// function raiseAlert(event) {
+//   console.log(event);
+//   alert("Hello World");
+//   console.log(this);
+// }
+// let forma = document.querySelector("form");
+
+// forma.addEventListener("submit", function (event) {
+//   event.preventDefault();
+//   let input = document.querySelector("input");
+//   let img = document.createElement("img");
+//   img.src = input.value;
+//   img.addEventListener("click", function () {
+//     img.remove();
+//   });
+//   document.body.appendChild(img);
+//   input.value = "";
+// });
