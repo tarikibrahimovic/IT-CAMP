@@ -92,25 +92,25 @@
 
 // document.body.appendChild(div);
 
-function showCatFacts(data) {
-  let div = document.createElement("div");
-  div.innerHTML = data.fact;
+// function showCatFacts(data) {
+//   let div = document.createElement("div");
+//   div.innerHTML = data.fact;
 
-  document.body.appendChild(div);
-}
+//   document.body.appendChild(div);
+// }
 
-async function getCatFacts() {
-  try {
-    let data = await fetch("https://catfact.ninja/fact?max_length=40");
-    let res = await data.json();
-    console.log(res);
-    showCatFacts(res);
-  } catch (err) {
-    console.log(err);
-  }
-}
+// async function getCatFacts() {
+//   try {
+//     let data = await fetch("https://catfact.ninja/fact?max_length=40");
+//     let res = await data.json();
+//     console.log(res);
+//     showCatFacts(res);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
 
-getCatFacts();
+// getCatFacts();
 
 // async function postData(url = "", data = {}) {
 //   // Default options are marked with *
@@ -133,3 +133,45 @@ getCatFacts();
 // postData("https://example.com/answer", { answer: 42 }).then((data) => {
 //   console.log(data); // JSON data parsed by `response.json()` call
 // });
+/////////////////////////////////////////////////////////////////////////
+
+let label = document.createElement("label")
+label.innerText = "Unesite ime pokemona";
+let input = document.createElement("input")
+let button = document.createElement("button")
+button.innerText = "Uzmi pokemona";
+let div = document.createElement("div");
+
+
+div.appendChild(label)
+div.appendChild(input)
+div.appendChild(button);
+
+document.body.appendChild(div)
+
+button.addEventListener("click", function (e) {
+  e.preventDefault();
+  getPokemon(input.value);
+})
+
+
+function showPokemon(data) {
+  let div = document.createElement("div");
+  let img = document.createElement("img")
+  img.src = data.sprites.front_default;
+  div.innerHTML = data.name;
+  div.appendChild(img)
+
+  document.body.appendChild(div);
+}
+
+async function getPokemon(name) {
+  try {
+    let data = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+    let res = await data.json();
+    console.log(res);
+    showPokemon(res);
+  } catch (err) {
+    console.log(err);
+  }
+}
