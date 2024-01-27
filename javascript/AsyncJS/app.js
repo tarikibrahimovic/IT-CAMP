@@ -135,32 +135,34 @@
 // });
 /////////////////////////////////////////////////////////////////////////
 
-let label = document.createElement("label")
+let label = document.createElement("label");
 label.innerText = "Unesite ime pokemona";
-let input = document.createElement("input")
-let button = document.createElement("button")
+let input = document.createElement("input");
+let button = document.createElement("button");
 button.innerText = "Uzmi pokemona";
 let div = document.createElement("div");
 
-
-div.appendChild(label)
-div.appendChild(input)
+div.appendChild(label);
+div.appendChild(input);
 div.appendChild(button);
 
-document.body.appendChild(div)
+document.body.appendChild(div);
 
 button.addEventListener("click", function (e) {
   e.preventDefault();
   getPokemon(input.value);
-})
-
+});
 
 function showPokemon(data) {
   let div = document.createElement("div");
-  let img = document.createElement("img")
+  let img = document.createElement("img");
   img.src = data.sprites.front_default;
   div.innerHTML = data.name;
-  div.appendChild(img)
+  div.addEventListener("click", function (e) {
+    e.preventDefault();
+    window.location.href = `stranica2/index.html?pokemon=${data.name}`;
+  });
+  div.appendChild(img);
 
   document.body.appendChild(div);
 }
