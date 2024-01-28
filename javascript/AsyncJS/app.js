@@ -135,41 +135,93 @@
 // });
 /////////////////////////////////////////////////////////////////////////
 
-let label = document.createElement("label");
-label.innerText = "Unesite ime pokemona";
-let input = document.createElement("input");
-let button = document.createElement("button");
-button.innerText = "Uzmi pokemona";
-let div = document.createElement("div");
+// let label = document.createElement("label");
+// label.innerText = "Unesite ime pokemona";
+// let input = document.createElement("input");
+// let button = document.createElement("button");
+// button.innerText = "Uzmi pokemona";
+// let div = document.createElement("div");
 
-div.appendChild(label);
-div.appendChild(input);
-div.appendChild(button);
+// div.appendChild(label);
+// div.appendChild(input);
+// div.appendChild(button);
 
-document.body.appendChild(div);
+// document.body.appendChild(div);
 
-button.addEventListener("click", function (e) {
-  e.preventDefault();
-  getPokemon(input.value);
-});
+// button.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   getPokemon(input.value);
+// });
 
-function showPokemon(data) {
-  let div = document.createElement("div");
-  let img = document.createElement("img");
-  img.src = data.sprites.front_default;
-  div.innerHTML = data.name;
-  div.addEventListener("click", function (e) {
-    e.preventDefault();
-    window.location.href = `stranica2/index.html?pokemon=${data.name}`;
-  });
-  div.appendChild(img);
+// function showPokemon(data) {
+//   let div = document.createElement("div");
+//   let img = document.createElement("img");
+//   img.src = data.sprites.front_default;
+//   div.innerHTML = data.name;
+//   div.addEventListener("click", function (e) {
+//     e.preventDefault();
+//     window.location.href = `stranica2/index.html?pokemon=${data.name}`;
+//   });
+//   div.appendChild(img);
 
-  document.body.appendChild(div);
-}
+//   document.body.appendChild(div);
+// }
 
-async function getPokemon(name) {
+// async function getPokemon(name) {
+//   try {
+//     let data = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+//     let res = await data.json();
+//     console.log(res);
+//     showPokemon(res);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
+
+//////////////////////////////////////////////////
+
+// let key = "07aedaa6bdmsh5086c5b7fe24ecep1ca830jsnc57d502e51b1";
+
+// localStorage.setItem("api_key", key);
+
+// async function getData() {
+//   const api_key = localStorage.getItem("api_key");
+//   const url =
+//     "https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50&offset=0";
+//   const options = {
+//     method: "GET",
+//     headers: {
+//       "X-RapidAPI-Key": `${api_key}`,
+//       "X-RapidAPI-Host": "coinranking1.p.rapidapi.com",
+//     },
+//   };
+
+//   try {
+//     const response = await fetch(url, options);
+//     const result = await response.text();
+//     console.log(result);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
+
+// getData(key);
+
+//////////////////////////////////////////////
+
+async function login(name) {
   try {
-    let data = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+    let options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username: "admin", password: "admin" }),
+    };
+    let data = await fetch(
+      `http://localhost:30777/Authorization/login`,
+      options
+    );
     let res = await data.json();
     console.log(res);
     showPokemon(res);
@@ -177,3 +229,47 @@ async function getPokemon(name) {
     console.log(err);
   }
 }
+
+async function register() {
+  try {
+    let options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + localStorage.getItem("token"),
+      },
+      body: JSON.stringify({
+        username: "admin",
+        password: "admin",
+        email: "admin@gmail.com",
+      }),
+    };
+    let data = await fetch(
+      `http://localhost:30777/Authorization/register`,
+      options
+    );
+    let res = await data.json();
+    console.log(res);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+let button = document.createElement("button");
+let button2 = document.createElement("button");
+
+button.innerText = "Login";
+button2.innerText = "Register";
+
+button.addEventListener("click", function (e) {
+  e.preventDefault();
+  login();
+});
+
+button2.addEventListener("click", function (e) {
+  e.preventDefault();
+  register();
+});
+
+document.body.appendChild(button);
+document.body.appendChild(button2);
