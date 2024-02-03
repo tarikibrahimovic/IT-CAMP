@@ -1026,7 +1026,6 @@
 
 // console.log(maxIteration, maxNumber);
 
-
 // let maxLength = 0;
 // let maxNiz = []
 
@@ -1050,18 +1049,18 @@
 
 // 10.45. Саставити програм који испистује да ли у унетом низу целих бројева постоје два елемента
 // чији је збир једнак датом броју. Користити бинарну претрагу за проналажење допуне до датог броја.
-// Елементи низа се уносе са тастатуре. 
+// Елементи низа се уносе са тастатуре.
 
 let findElement = (niz, broj) => {
-  for(let i = 0; i < niz.length; i++){
-    for(let j = i + 1; j < niz.length; j++){
-      if(niz[i] + niz[j] === broj){
-        return true
+  for (let i = 0; i < niz.length; i++) {
+    for (let j = i + 1; j < niz.length; j++) {
+      if (niz[i] + niz[j] === broj) {
+        return true;
       }
     }
   }
-  return false
-}
+  return false;
+};
 
 let brojClanova = parseInt(prompt("Unesite zeljeni broj clanova: "));
 let main = [];
@@ -1073,9 +1072,8 @@ for (let i = 0; i < brojClanova; i++) {
 
 let trazeniBroj = parseInt(prompt("Unesite broj koji trazite:"));
 
-if(findElement(main, trazeniBroj)){
+if (findElement(main, trazeniBroj)) {
   console.log("Postoji");
-}
-else{
+} else {
   console.log("Ne postoji");
 }
